@@ -89,7 +89,7 @@ url = "http://www.pat.nhs.uk/quality-and-performance/transparency-information.ht
 errors = 0
 data = []
 
-#### READ HTML 1.2
+#### READ HTML 1.0
 
 html = urllib2.urlopen(url)
 soup = BeautifulSoup(html, 'lxml')
