@@ -100,8 +100,6 @@ soup = BeautifulSoup(html, 'lxml')
 
 year_links = soup.find('div', 'main-content-box').find_all('a')
 for link in year_links:
-    # if 'http' not in link['href']:
-    #     link = 'http://www.pat.nhs.uk'+link['href']
     if 'http://' in link['href']:
         year_link = link['href']
     if 'http://' not in link['href']:
@@ -120,9 +118,6 @@ for link in year_links:
             csvYr = title[-4:]
             csvMth = convert_mth_strings(csvMth.upper())
             data.append([csvYr, csvMth, url])
-
-
-
 
 
 #### STORE DATA 1.0
